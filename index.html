@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="flex">
+      <div class="m-10 w-1/5">
+        <p class="mb-5 font-bold text-lg">Puzzle</p>
+        <div id="random" class="grid grid-cols-3"></div>
+
+        <div class="gap-2 flex flex-col">
+          <button
+            onclick="HandleSolve()"
+            class="mt-5 bg-green-600 text-white px-10 py-2 rounded"
+          >
+            Solve
+          </button>
+          <button
+            onclick="HandleChange()"
+            class="bg-amber-400 px-10 py-2 rounded"
+          >
+            Change
+          </button>
+        </div>
+      </div>
+
+      <div class="m-10 w-1/5">
+        <p class="heading mb-5 font-bold text-lg"></p>
+        <div id="solve" class="grid grid-cols-3"></div>
+      </div>
+    </div>
+    <script src="./sorting.js"></script>
+  </body>
+</html>
